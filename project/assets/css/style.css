@@ -1,0 +1,131 @@
+/* リセットやベーススタイルは適宜追加 */
+
+/* 共通レイアウト */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .site-header, .site-footer {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header-inner, .main-content, .site-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* ロゴ */
+  .logo img {
+    height: 40px;
+  }
+  
+  /* ナビゲーション */
+  .nav-menu {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+  }
+  
+  .menu-toggle {
+    display: none; /* PC表示では非表示に */
+  }
+  
+  /* Heroセクション */
+  .hero {
+    background: url('../images/coffee-heart.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* ボタン */
+  .btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .btn-primary {
+    background-color: #333;
+  }
+  
+  .btn-secondary {
+    background-color: #555;
+  }
+  
+  /* カード風のレイアウト */
+  .post-card, .event-card {
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  
+  /* メニューアイテム */
+  .menu-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .menu-item img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* レスポンシブ対応 */
+  @media screen and (max-width: 768px) {
+    .nav-menu {
+      display: none; /* 初期は非表示 */
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      border: 1px solid #ddd;
+    }
+  
+    .menu-toggle {
+      display: block; /* スマホ表示でハンバーガーメニューを表示 */
+    }
+  
+    .menu-item {
+      flex-direction: column;
+    }
+  
+    .hero {
+      padding: 60px 1rem;
+    }
+  
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+  }
+  
